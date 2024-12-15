@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Matching Files</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Multiple files found for {{ stock_name }}</h1>
+    <p>Please select one:</p>
+    <ul>
+        {% for file in matching_files %}
+        <li>{{ file }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
